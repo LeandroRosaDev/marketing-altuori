@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Menu from "@/componentes/Menu";
+import Footer from "@/componentes/Footer";
 
 export const metadata: Metadata = {
   title: "Marketing Altuori",
   description:
-    "Em busca de uma agência séria para trazer o público certo para o seu negócio? Parabéns você finalmente encontrou!",
+    "Marketing Altuori: Agência de marketing digital especializada em estratégias inovadoras que aumentam a visibilidade e o engajamento da sua marca. Transforme seu negócio com nossas soluções personalizadas.",
 };
 
 export default function RootLayout({
@@ -17,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Menu />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

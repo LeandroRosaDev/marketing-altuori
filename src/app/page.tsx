@@ -2,33 +2,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <header className="bg-[url('/assets/bg/1.png')] bg-cover bg-center h-[1000px]">
-        <div>
-          <img src="/assets/logotipo.png" alt="" />
-          <nav>
-            <ul>
-              <li>
-                <Link href="">INÍCIO</Link>
-              </li>
-              <li>
-                <Link href="">SOBRE NÓS</Link>
-              </li>
-              <li>
-                <Link href="">SERVIÇOS</Link>
-              </li>
-              <li>
-                <Link href="">CONTATO</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div>
-          <h1>
-            O Futuro do Marketing Digital <span>está Aqui.</span>
-          </h1>
-          <Link href="">CONFIRA NOSSOS PLANOS</Link>
-        </div>
-      </header>
       <section id="sobre" className="bg-[#DDD8D3]">
         <div>
           <div>
@@ -350,28 +323,6 @@ export default function Home() {
           <img src="/assets/img/8.png" alt="Imagem de um mapa" />
         </div>
       </section>
-      <footer>
-        <div>
-          <div className="bg-[#474747]">
-            <img src="/assets/logotipo.png" alt="logotipo" />
-            <p>
-              Transformando Visões em Realidade: Seu Negócio no Ápice do
-              Sucesso.
-            </p>
-            <div>
-              <img src="/assets/icones/8.svg" alt="Icone do facebook" />
-              <img src="/assets/icones/10.svg" alt="Icone do instagram" />
-              <img src="/assets/icones/12.svg" alt="Icone do linkedin" />
-            </div>
-          </div>
-          <div className="bg-[#292929]">
-            <p>Todos os direitos reservados. | © 2020 ALTUORI MARKETING</p>
-            <p>
-              Uma empresa do <a href="">Grupo Altuori</a>
-            </p>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
