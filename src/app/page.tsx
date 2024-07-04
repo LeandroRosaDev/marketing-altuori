@@ -260,7 +260,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[#474747] py-24">
-        <div className="w-screen flex justify-end ">
+        <div className="w-full flex justify-end ">
           <h1 className="text-3xl md:text-5xl font-bold text-white w-[80%] md:w-[60%] xl:w-[50%] md:text-start text-center mb-12 mx-auto md:mx-0 md:mr-4">
             Pare de perder tempo com Agências que não entregam{' '}
             <span className="text-yellow-500">resultados.</span>
