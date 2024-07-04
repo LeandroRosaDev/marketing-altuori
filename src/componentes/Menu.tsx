@@ -1,40 +1,115 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import { Lato } from 'next/font/google';
+
+const lato = Lato({
+  weight: ['100', '300', '400', '700', '900'],
+  subsets: ['latin'],
+});
 
 const Menu: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <header className="bg-[url('/assets/bg/1.png')] bg-cover bg-center h-screen relative">
-      <div className="flex justify-between items-center px-16 pt-16">
-        <img src="/assets/logotipo.png" alt="Logo" className="h-28" />
-        <nav>
-          <ul className=" space-x-12 text-white text-lg font-bold hidden md:flex">
-            <li>
-              <Link href="#inicio" className="hover:text-yellow-500">
-                INÍCIO
-              </Link>
-            </li>
-            <li>
-              <Link href="#sobre" className="hover:text-yellow-500">
-                SOBRE NÓS
-              </Link>
-            </li>
-            <li>
-              <Link href="#servicos" className="hover:text-yellow-500">
-                SERVIÇOS
-              </Link>
-            </li>
-            <li>
-              <Link href="#contato" className="hover:text-yellow-500">
-                CONTATO
-              </Link>
-            </li>
-          </ul>
-        </nav>
+    <header
+      className={`bg-[url('/assets/bg/1.png')] bg-cover bg-bottom md:h-screen h-[700px] relative ${lato.className} flex flex-col items-center`}
+    >
+      <div className="flex justify-center items-center pt-16 w-full">
+        <div className="flex justify-between items-center w-[85%]">
+          <img src="/assets/logotipo.png" alt="Logo" className="h-28" />
+          <nav>
+            <ul
+              className={`hidden md:flex space-x-8 text-white text-sm md:text-lg font-semibold ${
+                menuOpen ? 'hidden' : 'flex'
+              }`}
+            >
+              <li>
+                <Link href="/" className="hover:text-yellow-500">
+                  INÍCIO
+                </Link>
+              </li>
+              <li>
+                <Link href="#sobre" className="hover:text-yellow-500">
+                  SOBRE NÓS
+                </Link>
+              </li>
+              <li>
+                <Link href="#planos" className="hover:text-yellow-500">
+                  PLANOS
+                </Link>
+              </li>
+              <li>
+                <Link href="#contato" className="hover:text-yellow-500">
+                  CONTATO
+                </Link>
+              </li>
+            </ul>
+            {menuOpen ? (
+              ''
+            ) : (
+              <button
+                onClick={toggleMenu}
+                className="md:hidden focus:outline-none"
+              >
+                <div className="relative w-8 h-8 flex flex-col justify-between items-center">
+                  <span className="block w-full h-1 bg-yellow-500 rounded-md"></span>
+                  <span className="block w-full h-1 bg-yellow-500 rounded-md"></span>
+                  <span className="block w-full h-1 bg-yellow-500 rounded-md"></span>
+                </div>
+              </button>
+            )}
+          </nav>
+        </div>
+        {menuOpen && (
+          <div className="fixed inset-0 bg-neutral-700 flex flex-col items-center text-white animate-slide-in">
+            <button
+              onClick={toggleMenu}
+              className="absolute top-10 right-10 focus:outline-none"
+            >
+              <div className="relative w-8 h-8 flex flex-col justify-between items-center mt-6">
+                <span className="absolute block w-full h-1 bg-yellow-500 -rotate-45" />
+                <span className="absolute block w-full h-1 bg-yellow-500 transform rotate-45" />
+              </div>
+            </button>
+            <ul className="space-y-12 sm:space-y-14 text-xl text-center mt-[20%]">
+              <li className="hover:text-blue-400">
+                <Link href="/" onClick={closeMenu}>
+                  INÍCIO
+                </Link>
+              </li>
+              <li className="hover:text-blue-400">
+                <Link href="#sobre" onClick={closeMenu}>
+                  SOBRE NÓS
+                </Link>
+              </li>
+              <li className="hover:text-blue-400">
+                <Link href="#planos" onClick={closeMenu}>
+                  PLANOS
+                </Link>
+              </li>
+              <li className="hover:text-blue-400">
+                <Link href="#contato" onClick={closeMenu}>
+                  CONTATO
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
-      <div className="flex flex-col items-start justify-center h-full text-center text-white pl-16 ml-6 -mt-16">
-        <h1 className="text-4xl md:text-6xl font-semi-bold text-start">
+      <div className="flex flex-col justify-center h-full text-white w-[80%] items-start">
+        <h1 className="text-4xl sm:text-6xl md:text-[80px] leading-normal tracking-widest font-semi-bold text-start">
           O Futuro do Marketing Digital <br />
-          <span className="text-yellow-500">está Aqui.</span>
+          <span className="text-yellow-500 font-bold">está Aqui.</span>
         </h1>
         <Link
           href="#planos"
