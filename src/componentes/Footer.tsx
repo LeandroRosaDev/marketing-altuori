@@ -38,26 +38,34 @@ const Footer: React.FC = () => {
           Transformando Visões em Realidade: Seu Negócio no Ápice do Sucesso.
         </p>
         <div className="flex justify-center space-x-4 sm:space-x-8 mb-4">
-          <img
-            src="/assets/icones/8.svg"
-            alt="Icone do facebook"
-            className="w-8 sm:w-12 h-8 sm:h-12"
-          />
-          <img
-            src="/assets/icones/10.svg"
-            alt="Icone do instagram"
-            className="w-8 sm:w-12 h-8 sm:h-12"
-          />
-          <img
-            src="/assets/icones/12.svg"
-            alt="Icone do linkedin"
-            className="w-8 sm:w-12 h-8 sm:h-12"
-          />
-          <img
-            src="/assets/icones/14.svg"
-            alt="Icone do whatsapp"
-            className="w-8 sm:w-12 h-8 sm:h-12"
-          />
+          <Link href="https://www.facebook.com/marketing.altuori">
+            <img
+              src="/assets/icones/8.svg"
+              alt="Icone do facebook"
+              className="w-8 sm:w-12 h-8 sm:h-12"
+            />
+          </Link>
+          <Link href="https://www.instagram.com/marketing.altuori/">
+            <img
+              src="/assets/icones/10.svg"
+              alt="Icone do instagram"
+              className="w-8 sm:w-12 h-8 sm:h-12"
+            />
+          </Link>
+          <Link href="">
+            <img
+              src="/assets/icones/12.svg"
+              alt="Icone do linkedin"
+              className="w-8 sm:w-12 h-8 sm:h-12"
+            />
+          </Link>
+          <Link href="//api.whatsapp.com/send?phone=+5521992390346&text=Olá tudo bem? Gostaria de saber mais sobre os serviços disponíveis! Eu vim através do site de vocês!!">
+            <img
+              src="/assets/icones/14.svg"
+              alt="Icone do whatsapp"
+              className="w-8 sm:w-12 h-8 sm:h-12"
+            />
+          </Link>
         </div>
       </div>
       <div className="bg-[#292929] py-4">

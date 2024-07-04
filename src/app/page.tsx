@@ -260,24 +260,26 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[#474747] py-24">
-        <h1 className="text-3xl md:text-5xl font-bold text-white w-[80%] md:w-[70%] xl:w-[50%] md:text-start text-center md:ml-12 mb-12 mx-auto">
-          Pare de perder tempo com Agências que não entregam{' '}
-          <span className="text-yellow-500">resultados.</span>
-        </h1>
+        <div className="w-screen flex justify-end ">
+          <h1 className="text-3xl md:text-5xl font-bold text-white w-[80%] md:w-[60%] xl:w-[50%] md:text-start text-center mb-12 mx-auto md:mx-0 md:mr-4">
+            Pare de perder tempo com Agências que não entregam{' '}
+            <span className="text-yellow-500">resultados.</span>
+          </h1>
+        </div>
         <div className="text-center mb-12 bg-[url('/assets/bg/2.png')] bg-cover bg-center h-[500px] lg:h-[600px] w-full"></div>
+        <div className="">
+          <h1
+            className="text-3xl md:text-5xl font-bold text-white
+         mb-12 w-[80%] md:w-[70%] xl:w-[50%] md:text-start text-center mx-auto md:mx-14"
+          >
+            Confiram nossos planos e <br /> se surpreendam com nossos{' '}
+            <span className="text-yellow-500">Valores.</span>
+          </h1>
+        </div>
         <div
           id="planos"
           className="flex flex-col items-center lg:w-[80%] mx-auto"
         >
-          <div className="mx-14">
-            <h1
-              className="text-3xl md:text-5xl font-bold text-white
-         mb-12"
-            >
-              Confiram nossos planos e <br /> se surpreendam com nossos{' '}
-              <span className="text-yellow-500">Valores.</span>
-            </h1>
-          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-14 lg:px-0 xl:flex">
             <div className="bg-yellow-500 text-center p-8 rounded-lg shadow-lg flex flex-col justify-between h-[550px] sm:h-[600px] mx-auto lg:w-[80%] xl:w-72 2xl:w-80">
               <h1 className="text-3xl font-semibold mb-4 md:text-4xl">
@@ -400,7 +402,7 @@ export default function Home() {
                 </span>
               </h1>
               <div className="flex justify-center space-x-4 lg:space-x-8 mb-4">
-                <Link href="#">
+                <Link href="mailto:marketingaltuori@gmail.com">
                   <img
                     src="/assets/icones/5.svg"
                     alt="Icone de um email"
@@ -408,14 +410,14 @@ export default function Home() {
                   />
                 </Link>
 
-                <Link href="#">
+                <Link href="//api.whatsapp.com/send?phone=+5521992390346&text=Olá tudo bem? Gostaria de saber mais sobre os serviços disponíveis! Eu vim através do site de vocês!!">
                   <img
                     src="/assets/icones/6.svg"
                     alt="Icone de um telefone"
                     className="w-12 h-12 lg:w-20 lg:h-20"
                   />
                 </Link>
-                <Link href="#">
+                <Link href="//api.whatsapp.com/send?phone=+5521992390346&text=Olá tudo bem? Gostaria de saber mais sobre os serviços disponíveis! Eu vim através do site de vocês!!">
                   <img
                     src="/assets/icones/7.svg"
                     alt="Icone de uma mensagem"

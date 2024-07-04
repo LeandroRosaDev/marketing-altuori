@@ -71,7 +71,7 @@ const Menu: React.FC = () => {
           </nav>
         </div>
         {menuOpen && (
-          <div className="fixed inset-0 bg-neutral-700 flex flex-col items-center text-white animate-slide-in">
+          <div className="fixed inset-0 bg-neutral-700 flex flex-col items-center text-white animate-slide-in z-50">
             <button
               onClick={toggleMenu}
               className="absolute top-10 right-10 focus:outline-none"
